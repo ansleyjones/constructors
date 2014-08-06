@@ -30,11 +30,11 @@ function Consumer(wantedTrade, budget){
   this.afford = function(craftsman) {
     var budgetDiff = this.budget - craftsman.workCost
     if (this.wantedTrade == craftsman.trade && budgetDiff < 0){
-      console.log(craftsman.name + "makes what you want but their work is too bourgie for you, peasant");
+      console.log(craftsman.name + " makes what you want but his/her work is too bourgie for you, peasant");
     }else if (this.wantedTrade == craftsman.trade && budgetDiff === 0){
-      console.log(craftsman.name + "makes what you want but their work barely within your budget");
+      console.log(craftsman.name + " makes what you want but his/her work barely within your budget");
     }else if (this.wantedTrade == craftsman.trade && budgetDiff > 0){
-      console.log(craftsman.name + "makes what you want and their work is affordable for you");
+      console.log(craftsman.name + " makes what you want and his/her work is affordable for you");
     }else{
       console.log(craftsman.name + " does not work in " + this.wantedTrade);
     }
